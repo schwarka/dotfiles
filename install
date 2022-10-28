@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
+brew list rg || brew install rg
+brew list fd || brew install fd
+
 if [[ ! -d "$HOME/.config" ]]
 then
   mkdir -p $HOME/.config
 fi
 
 nvim_config_path="${PWD}/nvim"
-echo $nvim_config_path
 
 pushd $HOME/.config
 ln -s $nvim_config_path .
