@@ -1,4 +1,3 @@
-print("lua/vim_options.lua")
 vim.opt.nu = true -- show current line number
 vim.opt.relativenumber = true -- show relative line numbers from cursor
 

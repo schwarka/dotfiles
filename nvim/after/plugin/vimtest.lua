@@ -1,0 +1,1 @@
+--vim.g['test#javascript#jest#executable'] = 'pnpm jest --config testing/jest.config.js'
