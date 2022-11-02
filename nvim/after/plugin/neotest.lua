@@ -14,6 +14,10 @@ require("neotest").setup {
           "rspec",
         })
       end 
+    },
+    require "neotest-plenary",
+    require "neotest-vim-test" {
+      ignore_file_types = { "ruby", "javascript", "vim", "lua" }  
     }
   }
 }

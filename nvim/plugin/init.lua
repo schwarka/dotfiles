@@ -38,10 +38,11 @@ return require('packer').startup(function(use)
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "antoinemadec/FixCursorHold.nvim",
+      "vim-test/vim-test",
       "haydenmeade/neotest-jest",
       "olimorris/neotest-rspec",
-      --"nvim-neotest/neotest-plenary",
-      --"nvim-neotest/neotest-vim-test"
+      "nvim-neotest/neotest-plenary",
+      "nvim-neotest/neotest-vim-test"
     }
   }
 
