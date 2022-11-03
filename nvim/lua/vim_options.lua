@@ -15,6 +15,10 @@ vim.opt.hidden = true -- keep buffers open in the background
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 10 -- start scrolling when ten lines from top or bottom
 
+-- show whitespace
+vim.opt.list = true
+vim.opt.listchars:append "space:⋅"
+
 vim.opt.signcolumn = "yes" -- add column for plugin feedback (linters, git)
 vim.opt.colorcolumn = "100" -- buffer width guideline
 

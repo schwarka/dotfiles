@@ -24,7 +24,7 @@ return require('packer').startup(function(use)
 
   use 'tpope/vim-fugitive' -- git integration
   use 'tpope/vim-endwise' -- auto create end parens, brackets, etc
-  --use 'vim-test/vim-test' -- multi-lang test runner
+  use "lukas-reineke/indent-blankline.nvim" -- indent guides
 
   -- Ruby/Rails
   use 'tpope/vim-rails'
