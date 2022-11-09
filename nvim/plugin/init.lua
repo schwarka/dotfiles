@@ -31,6 +31,19 @@ return require('packer').startup(function(use)
   use 'tpope/vim-bundler'
   use 'tpope/vim-rake'
 
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { 
+      'nvim-lua/plenary.nvim',
+      { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
+    }
+  }
+
+  use {
+  'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
   -- Testing
   use {
     "nvim-neotest/neotest",
@@ -46,18 +59,9 @@ return require('packer').startup(function(use)
     }
   }
 
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { 
-      'nvim-lua/plenary.nvim',
-      { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
-    }
-  }
-
-  use {
-  'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+  -- Debugging
+  use "mfussenegger/nvim-dap"
+  use "suketa/nvim-dap-ruby"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
