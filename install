@@ -9,8 +9,13 @@ then
   mkdir -p $HOME/.config
 fi
 
-nvim_config_path="${PWD}/nvim"
+base_path="${PWD}"
+nvim_config_path="${base_path}/nvim"
 
 pushd $HOME/.config
 ln -s $nvim_config_path .
+popd
+
+pushd $HOME
+ln  -s $base_path/.ideavimrc .
 popd

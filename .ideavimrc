@@ -1,0 +1,113 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" ---------------------
+"" Map leader to space
+"" ---------------------
+let mapleader=" "
+
+"" ---------------------
+"" Plugins
+"" ---------------------
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'vim-scripts/ReplaceWithRegister'
+set sneak
+
+"" ---------------------
+"" Settings
+"" ---------------------
+set scrolloff=5     " start scrolling before edge of screen
+set incsearch       " search while typing
+set nu              " show line numbers
+set relativenumber  " show relative line numbers
+
+" Use system clipboard
+set clipboard+=unnamed
+set clipboard+=ideaput
+
+set ideajoin
+set idearefactormode=keep
+
+"" ---------------------
+"" Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" ---------------------
+
+" Use \ for less used shortcuts
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \s :source ~/.ideavimrc<CR>
+nnoremap \f :action ReformatCode<CR>
+nnoremap \b :action ToggleLineBreakpoint<CR>
+
+" Tool Windows
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
+nnoremap <c-p> :action JumpToLastWindow<CR>
+nnoremap <c-x> :action HideAllWindows<CR>
+nnoremap nt :NERDTree<CR>
+
+" Editor Splits
+nnoremap <c-\> :action SplitVertically<CR>
+nnoremap <c-=> :action Unsplit<CR>
+nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <leader>ce :action CloseEditor<CR>
+nnoremap <leader>cE :action CloseAllEditors<CR>
+nnoremap <s-TAB> :action PreviousTab<CR>
+nnoremap <TAB> :action NextTab<CR>
+
+" Navigate Between Editor Splits
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+
+" Editor Windows
+nnoremap <leader>w :action NextWindow<CR>
+
+" Source Code
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+nnoremap zc :action CollapseRegion<CR>
+nnoremap zo :action ExpandRegion<CR>
+nnoremap <leader>zc :action CollapseAllRegions<CR>
+nnoremap <leader>zo :action ExpandAllRegions<CR>
+nnoremap <leader>=  :action ReformatCode<CR>
+nnoremap <leader>o :action OptimizeImports<CR>
+nnoremap <leader>l :action RecentLocations<CR>
+nnoremap <leader>h  :action LocalHistory.ShowHistory<CR>
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+nnoremap <leader>b :action Annotate<CR>
+
+" Refactoring
+nnoremap ev :action IntroduceVariable<CR>
+nnoremap ec :action IntroduceConstant<CR>
+nnoremap em :action ExtractMethod<CR>
+nnoremap es :action ExtractSuperclass<CR>
+
+" Code Navigation
+nnoremap <leader>u :action FindUsages<CR>
+nnoremap <leader>h :action CallHierarchy<CR>
+nnoremap <leader>s :action FileStructurePopup<CR>
+nnoremap gc :action GotoClass<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gp :action GotoSuperMethod<CR>
+nnoremap gt :action GotoTest<CR>
+nnoremap gb :action Back<CR>
+nnoremap gf :action Forward<CR>
+
+" Run/Debug
+nnoremap ,r :action RunClass<CR>
+nnoremap ,c :action ChooseRunConfiguration<CR>
+nnoremap ,t :action ActivateRunToolWindow<CR>
+nnoremap ,u :action Rerun<CR>
+
+nnoremap ,b :action ToggleLineBreakpoint<CR>
+nnoremap ,d :action ContextDebug<CR>
+nnoremap ,n :action ActivateDebugToolWindow<CR>
+
+" Find more examples here: https://jb.gg/share-ideavimrc
