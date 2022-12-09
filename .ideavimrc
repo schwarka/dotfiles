@@ -22,6 +22,7 @@ set scrolloff=5     " start scrolling before edge of screen
 set incsearch       " search while typing
 set nu              " show line numbers
 set relativenumber  " show relative line numbers
+set colorcolumn=80
 
 " Use system clipboard
 set clipboard+=unnamed
@@ -45,14 +46,15 @@ nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
 nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
 nnoremap <c-p> :action JumpToLastWindow<CR>
 nnoremap <c-x> :action HideAllWindows<CR>
+nnoremap <c-f> :action ActivateFindToolWindow<CR>
 nnoremap nt :NERDTree<CR>
 
 " Editor Splits
 nnoremap <c-\> :action SplitVertically<CR>
 nnoremap <c-=> :action Unsplit<CR>
 nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
-nnoremap <leader>ce :action CloseEditor<CR>
-nnoremap <leader>cE :action CloseAllEditors<CR>
+nnoremap <leader>q :action CloseEditor<CR>
+nnoremap <leader>Q :action CloseAllEditors<CR>
 nnoremap <s-TAB> :action PreviousTab<CR>
 nnoremap <TAB> :action NextTab<CR>
 
@@ -70,6 +72,8 @@ nnoremap <leader>w :action NextWindow<CR>
 " Source Code
 nnoremap [[ :action MethodUp<CR>
 nnoremap ]] :action MethodDown<CR>
+nnoremap J :action MoveLineDown<CR>
+nnoremap K :action MoveLineUp<CR>
 nnoremap zc :action CollapseRegion<CR>
 nnoremap zo :action ExpandRegion<CR>
 nnoremap <leader>zc :action CollapseAllRegions<CR>
@@ -87,6 +91,7 @@ nnoremap ev :action IntroduceVariable<CR>
 nnoremap ec :action IntroduceConstant<CR>
 nnoremap em :action ExtractMethod<CR>
 nnoremap es :action ExtractSuperclass<CR>
+nnoremap <leader>r :action RenameElement<CR>
 
 " Code Navigation
 nnoremap <leader>u :action FindUsages<CR>
