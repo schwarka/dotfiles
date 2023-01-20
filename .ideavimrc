@@ -48,31 +48,57 @@ nnoremap \b :action ToggleLineBreakpoint<CR>
 
 " View Settings
 let g:WhichKeyDesc_view = "<leader>v View options"
-nnoremap <leader>vd :action ToggleDistrationFreeMode<CR>
 
-let g:WhichKeyDesc_zen = "<leader>vz Toggle Zen Mode"
+let g:WhichKeyDesc_view_distraction_free = "<leader>vd Distraction Free Mode"
+nnoremap <leader>vd :action ToggleDistractionFreeMode<CR>
+
+let g:WhichKeyDesc_view_zen = "<leader>vz Toggle Zen Mode"
 nnoremap <leader>vz :action ToggleZenMode<CR>
 
-let g:WhichKeyDesc_fullscreen = "<leader>vf Toggle Fullscreen"
+let g:WhichKeyDesc_view_fullscreen = "<leader>vf Toggle Fullscreen"
 nnoremap <leader>vf :action ToggleFullScreen<CR>
 
-let g:WhichKeyDesc_presentation = "<leader>vp Toggle Presentation Mode"
+let g:WhichKeyDesc_view_presentation = "<leader>vp Toggle Presentation Mode"
 nnoremap <leader>vp :action TogglePresentationMode<CR>
 
 " Tool Windows
-nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
-nnoremap <c-p> :action JumpToLastWindow<CR>
-nnoremap <c-x> :action HideAllWindows<CR>
-nnoremap <c-f> :action ActivateFindToolWindow<CR>
-nnoremap <leader>x :NERDTree<CR>
+let g:WhichKeyDesc_tools = "<leader>t Tool Windows"
 
-" Editor Splits
-nnoremap <c-\> :action SplitVertically<CR>
-nnoremap <c-=> :action Unsplit<CR>
-nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
-nnoremap <leader>q :action CloseEditor<CR>
-nnoremap <leader>Q :action CloseAllEditors<CR>
+let g:WhichKeyDesc_tools_terminal = "<leader>tt Terminal"
+nnoremap <leader>tt :action ActivateTerminalToolWindow<CR>
+
+let g:WhichKeyDesc_tools_last_window = "<leader>tp Last Window"
+nnoremap <leader>tp :action JumpToLastWindow<CR>
+
+let g:WhichKeyDesc_tools_find = "<leader>tf Find"
+nnoremap <leader>tf :action ActivateFindToolWindow<CR>
+
+let g:WhichKeyDesc_tools_file_explorer = "<leader>tx File Explorer"
+nnoremap <leader>tx :NERDTree<CR>
+
+" Editor Window
+let g:WhichKeyDesc_editor = "<leader>e Editor Window"
+
+let g:WhichKeyDesc_editor_split = "<leader>es Split"
+nnoremap <leader>es :action SplitVertically<CR>
+
+let g:WhichKeyDesc_editor_unsplit = "<leader>eu Unsplit"
+nnoremap <leader>eu :action Unsplit<CR>
+
+let g:WhichKeyDesc_editor_move_opposite = "<leader>em Move Opposite"
+nnoremap <leader>em :action MoveEditorToOppositeTabGroup<CR>
+
+let g:WhichKeyDesc_editor_close = "<leader>eq Close Tab"
+nnoremap <leader>eq :action CloseEditor<CR>
+
+let g:WhichKeyDesc_editor_close_all = "<leader>eQ Close All Tabs"
+nnoremap <leader>eQ :action CloseAllEditors<CR>
+
+" Tabs
+let g:WhichKeyDesc_previous_tab = "<s-TAB> Previous Tab"
 nnoremap <s-TAB> :action PreviousTab<CR>
+
+let g:WhichKeyDesc_next_tab = "<TAB> Next Tab"
 nnoremap <TAB> :action NextTab<CR>
 
 " Navigate Between Editor Splits
@@ -83,24 +109,36 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 
-" Editor Windows
-nnoremap <leader>w :action NextWindow<CR>
-
 " Source Code
+
 nnoremap [[ :action MethodUp<CR>
+
 nnoremap ]] :action MethodDown<CR>
+
 nnoremap J :action MoveLineDown<CR>
+
 nnoremap K :action MoveLineUp<CR>
+
 nnoremap zc :action CollapseRegion<CR>
+
 nnoremap zo :action ExpandRegion<CR>
+
 nnoremap <leader>zc :action CollapseAllRegions<CR>
+
 nnoremap <leader>zo :action ExpandAllRegions<CR>
+
 nnoremap <leader>=  :action ReformatCode<CR>
+
 nnoremap <leader>o :action OptimizeImports<CR>
+
 nnoremap <leader>l :action RecentLocations<CR>
+
 nnoremap <leader>h  :action LocalHistory.ShowHistory<CR>
+
 nnoremap ge :action GotoNextError<CR>
+
 nnoremap gE :action GotoPreviousError<CR>
+
 nnoremap <leader>b :action Annotate<CR>
 
 " Refactoring
