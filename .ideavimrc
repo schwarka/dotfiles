@@ -13,8 +13,6 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/ReplaceWithRegister'
-set sneak
-set easymotion
 set notimeout
 
 set which-key
@@ -44,7 +42,6 @@ set idearefactormode=keep
 nnoremap \e :e ~/.ideavimrc<CR>
 nnoremap \s :source ~/.ideavimrc<CR>
 nnoremap \f :action ReformatCode<CR>
-nnoremap \b :action ToggleLineBreakpoint<CR>
 
 " View Settings
 let g:WhichKeyDesc_view = "<leader>v View options"
@@ -152,7 +149,6 @@ nnoremap er :action RenameElement<CR>
 nnoremap <leader>u :action FindUsages<CR>
 nnoremap <leader>h :action CallHierarchy<CR>
 nnoremap <leader>s :action FileStructurePopup<CR>
-nnoremap gc :action GotoClass<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gp :action GotoSuperMethod<CR>
@@ -167,7 +163,25 @@ nnoremap ,t :action ActivateRunToolWindow<CR>
 nnoremap ,u :action Rerun<CR>
 
 nnoremap ,b :action ToggleLineBreakpoint<CR>
-nnoremap ,d :action ContextDebug<CR>
+nnoremap ,d :action DebugClass<CR>
 nnoremap ,n :action ActivateDebugToolWindow<CR>
+
+" Git
+let g:WhichKeyDesc_git = "<leader>g Git"
+
+let g:WhichKeyDesc_git_stash = "<leader>gs Stash"
+nnoremap <leader>gs :action Git.Stash<CR>
+
+let g:WhichKeyDesc_git_unstash = "<leader>gu Unstash"
+nnoremap <leader>gu :action Git.Unstash<CR>
+
+let g:WhichKeyDesc_git_menu = "<leader>gm Menu"
+nnoremap <leader>gm :action Git.Menu<CR>
+
+let g:WhichKeyDesc_git_branches = "<leader>gb Branches"
+nnoremap <leader>gb :action Git.Branches<CR>
+
+let g:WhichKeyDesc_git_log = "<leader>gr Resolve Conflicts"
+nnoremap <leader>gr :action Git.ResolveConflicts<CR>
 
 " Find more examples here: https://jb.gg/share-ideavimrc
