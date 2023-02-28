@@ -73,6 +73,12 @@ nnoremap <leader>tf :action ActivateFindToolWindow<CR>
 let g:WhichKeyDesc_tools_file_explorer = "<leader>tx File Explorer"
 nnoremap <leader>tx :NERDTree<CR>
 
+let g:WhichKeyDesc_tools_run = "<leader>tr Run Window"
+nnoremap <leader>tr :action ActivateRunToolWindow<CR>
+
+let g:WhichKeyDesc_tools_debug = "<leader>td Debug Window"
+nnoremap <leader>td :action ActivateDebugToolWindow<CR>
+
 " Editor Window
 let g:WhichKeyDesc_editor = "<leader>e Editor Window"
 
@@ -157,14 +163,21 @@ nnoremap gb :action Back<CR>
 nnoremap gf :action Forward<CR>
 
 " Run/Debug
+let g:WhichKeyDesc_run = ",r Run"
 nnoremap ,r :action RunClass<CR>
+
+let g:WhichKeyDesc_run_config = ",c Choose Configuration"
 nnoremap ,c :action ChooseRunConfiguration<CR>
-nnoremap ,t :action ActivateRunToolWindow<CR>
+
+let g:WhichKeyDesc_rerun = ",u Rerun"
 nnoremap ,u :action Rerun<CR>
 
+let g:WhichKeyDesc_breakpoint = ",b Toggle Breakpoint"
 nnoremap ,b :action ToggleLineBreakpoint<CR>
+
+let g:WhichKeyDesc_debug = ",d Debug"
 nnoremap ,d :action DebugClass<CR>
-nnoremap ,n :action ActivateDebugToolWindow<CR>
+
 
 " Git
 let g:WhichKeyDesc_git = "<leader>g Git"
