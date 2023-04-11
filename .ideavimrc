@@ -13,6 +13,7 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'vim-matchit'
 set notimeout
 
 set which-key
@@ -23,7 +24,7 @@ let g:WhichKey_FontSize = 17
 "" ---------------------
 set scrolloff=10    " start scrolling before edge of screen
 set incsearch       " search while typing
-set nu              " show line numbers
+set number          " show line numbers
 set relativenumber  " show relative line numbers
 set colorcolumn=80
 
