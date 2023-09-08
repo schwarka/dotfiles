@@ -12,7 +12,10 @@ let mapleader=" "
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+
+" In VISUAL mode, use `gr` to replace selection with clipboard text without overwriting clipboard
 Plug 'vim-scripts/ReplaceWithRegister'
+
 Plug 'vim-matchit'
 set notimeout
 
@@ -22,7 +25,7 @@ let g:WhichKey_FontSize = 17
 "" ---------------------
 "" Settings
 "" ---------------------
-set scrolloff=10    " start scrolling before edge of screen
+set scrolloff=20    " start scrolling before edge of screen
 set incsearch       " search while typing
 set number          " show line numbers
 set relativenumber  " show relative line numbers
@@ -97,6 +100,9 @@ nnoremap <leader>eq :action CloseEditor<CR>
 
 let g:WhichKeyDesc_editor_close_all = "<leader>eQ Close All Tabs"
 nnoremap <leader>eQ :action CloseAllEditors<CR>
+
+let g:WhichKeyDesc_editor_close_others = "<leader>eO Close Other Tabs"
+nnoremap <leader>eO :action CloseAllEditorsButActive<CR>
 
 " Tabs
 let g:WhichKeyDesc_previous_tab = "<s-TAB> Previous Tab"
