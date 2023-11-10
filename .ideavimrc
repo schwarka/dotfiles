@@ -18,14 +18,14 @@ Plug 'vim-scripts/ReplaceWithRegister'
 
 Plug 'vim-matchit'
 set notimeout
-
+set easymotion
 set which-key
 let g:WhichKey_FontSize = 17
 
 "" ---------------------
 "" Settings
 "" ---------------------
-set scrolloff=20    " start scrolling before edge of screen
+set scrolloff=10    " start scrolling before edge of screen
 set incsearch       " search while typing
 set number          " show line numbers
 set relativenumber  " show relative line numbers
