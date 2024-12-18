@@ -10,3 +10,7 @@ vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true })
+
+-- more ergonomic shortcuts for navigating cursor jumps
+vim.api.nvim_set_keymap("n", "gb", "<C-o>", { noremap = true, desc = "Go Back to previous cursor jump" })
+vim.api.nvim_set_keymap("n", "gf", "<C-i>", { noremap = true, desc = "Go Forward to next cursor jump" })
