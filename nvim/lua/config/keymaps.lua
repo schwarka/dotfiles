@@ -6,10 +6,10 @@
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
 
 -- use CTRL+h/j/k/l to navigate editor splits
-vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true })
-vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true })
-vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true })
-vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true })
+vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true, desc = "Navigate one split left" })
+vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true, desc = "Navigate one split down" })
+vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true, desc = "Navigate one split up" })
+vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true, desc = "Navigate one split right" })
 
 -- more ergonomic shortcuts for navigating cursor jumps
 vim.api.nvim_set_keymap("n", "gb", "<C-o>", { noremap = true, desc = "Go Back to previous cursor jump" })
