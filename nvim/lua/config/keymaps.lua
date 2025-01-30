@@ -14,3 +14,6 @@ vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true, desc = "Naviga
 -- more ergonomic shortcuts for navigating cursor jumps
 vim.api.nvim_set_keymap("n", "gb", "<C-o>", { noremap = true, desc = "Go Back to previous cursor jump" })
 vim.api.nvim_set_keymap("n", "gf", "<C-i>", { noremap = true, desc = "Go Forward to next cursor jump" })
+
+-- manage projects/workspaces with neovim-project
+vim.api.nvim_set_keymap("n", "<leader>fp", ":NeovimProjectDiscover<CR>", { noremap = true, desc = "Find projects" })
