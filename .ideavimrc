@@ -204,4 +204,10 @@ nnoremap <leader>gb :action Git.Branches<CR>
 let g:WhichKeyDesc_git_log = "<leader>gr Resolve Conflicts"
 nnoremap <leader>gr :action Git.ResolveConflicts<CR>
 
+" Project Navigation
+let g:WhichKeyDesc_find = "<leader>f Find"
+
+let g:WhichKeyDesc_find_project = "<leader>fp Project"
+nnoremap <leader>fp :action ManageRecentProjects<CR>
+
 " Find more examples here: https://jb.gg/share-ideavimrc
