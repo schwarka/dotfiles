@@ -210,4 +210,16 @@ let g:WhichKeyDesc_find = "<leader>f Find"
 let g:WhichKeyDesc_find_project = "<leader>fp Project"
 nnoremap <leader>fp :action ManageRecentProjects<CR>
 
+" Easy Motion
+let g:WhichKeyDesc_motion = "<leader>m Motion"
+
+let g:WhichKeyDesc_motion_line = "<leader>ml Line"
+map <leader>ml <Plug>(easymotion-bd-jk)
+
+let g:WhichKeyDesc_motion_char = "<leader>mc Character"
+map <leader>mc <Plug>(easymotion-bd-f)
+
+let g:WhichKeyDesc_motion_word = "<leader>mw Word"
+map <leader>mw <Plug>(easymotion-bd-w)
+
 " Find more examples here: https://jb.gg/share-ideavimrc
