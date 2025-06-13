@@ -222,4 +222,10 @@ map <leader>mc <Plug>(easymotion-bd-f)
 let g:WhichKeyDesc_motion_word = "<leader>mw Word"
 map <leader>mw <Plug>(easymotion-bd-w)
 
+" AI Assistant
+let g:WhichKeyDesc_motion = "<leader>a AI"
+
+let g:WhichKeyDesc_toggle_assistant = "<leader>ac Chat"
+nnoremap <leader>ac :action ActivateAIAssistantToolWindow<CR>
+
 " Find more examples here: https://jb.gg/share-ideavimrc
