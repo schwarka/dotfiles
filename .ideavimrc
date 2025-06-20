@@ -20,6 +20,11 @@ Plug 'vim-matchit'
 set notimeout
 set easymotion
 set which-key
+
+" Case-insensitive search
+set ignorecase
+set smartcase
+
 let g:WhichKey_FontSize = 17
 
 "" ---------------------
