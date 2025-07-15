@@ -231,6 +231,6 @@ map <leader>mw <Plug>(easymotion-bd-w)
 let g:WhichKeyDesc_motion = "<leader>a AI"
 
 let g:WhichKeyDesc_toggle_assistant = "<leader>ac Chat"
-nnoremap <leader>ac :action ActivateAIAssistantToolWindow<CR>
+nnoremap <leader>ac :action com.augmentcode.intellij.actions.ShowChatAction<CR>
 
 " Find more examples here: https://jb.gg/share-ideavimrc
